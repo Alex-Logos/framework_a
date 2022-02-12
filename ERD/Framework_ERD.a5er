@@ -1,0 +1,542 @@
+﻿# A5:ER FORMAT:15
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright © 2007 m.matsubara
+# A5:SQL Mk-2 Version 2.16.1 Copyright © 1997 - 2021 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=GLOBAL_MM
+Author=NTPL
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=0
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=6
+RDBMSTypeName=PostgreSQL
+GenerateCommentStatement_LName=0
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=0
+
+[Entity]
+PName=m_factory
+LName=factory master
+Comment=
+TableOption=
+Page=Main
+Left=1350
+Top=200
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="factory name","factory_name","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20180515171916
+Position="Main",1350,200
+ZOrder=8
+
+[Entity]
+PName=m_user_factory
+LName=user factory master
+Comment=
+TableOption=
+Page=Main
+Left=1750
+Top=150
+Field="user factory id","user_factory_id","serial","NOT NULL",0,"","",$FFFFFFFF,""
+Field="user code","user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+Field="display order","display_order","integer","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Index=m_user_factory_uidx1=1,user_cd,factory_cd
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20170727151425
+Position="Main",1750,150
+ZOrder=7
+
+[Relation]
+Entity1=m_mes_user
+Entity2=m_user_factory
+RelationType1=2
+RelationType2=3
+Fields1=user_cd
+Fields2=user_cd
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1872,5225,1885,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20161202110611
+LineMode=0
+Bar1=187
+Bar2=522
+Bar3=188
+TermPos1=R
+TermPos2=R
+ZOrder=6
+
+[Relation]
+Entity1=m_mes_role
+Entity2=m_mes_user_role
+RelationType1=2
+RelationType2=3
+Fields1=role_cd
+Fields2=role_cd
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",4,4769,1348,85,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20161220152550
+LineMode=4
+Bar1=477
+Bar2=135
+Bar3=8
+TermPos1=R
+TermPos2=R
+ZOrder=11
+
+[Relation]
+Entity1=m_mes_user
+Entity2=m_mes_user_role
+RelationType1=2
+RelationType2=3
+Fields1=user_cd
+Fields2=user_cd
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,559,5249,6996,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20161220152605
+LineMode=0
+Bar1=56
+Bar2=525
+Bar3=700
+TermPos1=R
+TermPos2=R
+ZOrder=10
+
+[Entity]
+PName=m_authority_control
+LName=authority control master
+Comment=
+TableOption=
+Page=Main
+Left=1000
+Top=1050
+Field="authority control code","authority_control_cd","@VARCHAR(14)","NOT NULL",0,"","Authorization code to match with user control\qs permission control properties.",$FFFFFFFF,""
+Field="authority control name","authority_control_name","@VARCHAR(128)","NOT NULL",,"","",$FFFFFFFF,""
+Field="parent control code","parent_control_cd","@VARCHAR(14)",,,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20170530110723
+Position="Main",1000,1050
+ZOrder=9
+
+[Relation]
+Entity1=m_authority_control
+Entity2=m_role_authority_control
+RelationType1=2
+RelationType2=3
+Fields1=authority_control_cd
+Fields2=authority_control_cd
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5394,4954,5287,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20161220152613
+LineMode=0
+Bar1=539
+Bar2=495
+Bar3=529
+TermPos1=R
+TermPos2=R
+ZOrder=2
+
+[Entity]
+PName=m_login_password
+LName=login password
+Comment=
+TableOption=
+Page=Main
+Left=2200
+Top=800
+Field="user code","user_cd","@VARCHAR(32)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="password","password","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user cd","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20170825112429
+Position="Main",2200,800
+ZOrder=1
+
+[Entity]
+PName=m_process
+LName=process master
+Comment=
+TableOption=
+Page=Main
+Left=100
+Top=1000
+Field="process id","process_id","serial","NOT NULL",0,"","",$FFFFFFFF,""
+Field="process code","process_cd","@VARCHAR(16)","NOT NULL",,"","",$FFFFFFFF,""
+Field="process name","process_name","@VARCHAR(64)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date tme","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+Index=m_process_uidx1=1,process_cd,factory_cd
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20180622133955
+Position="Main",100,1000
+ZOrder=0
+
+[Relation]
+Entity1=m_factory
+Entity2=m_user_factory
+RelationType1=2
+RelationType2=3
+Fields1=factory_cd
+Fields2=factory_cd
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5182,5256,7001,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20161202110648
+LineMode=0
+Bar1=518
+Bar2=526
+Bar3=700
+TermPos1=R
+TermPos2=R
+ZOrder=5
+
+[Entity]
+PName=m_role_authority_control
+LName=role authority control master
+Comment=
+TableOption=
+Page=Main
+Left=750
+Top=750
+Field="role authority control id","role_authority_control_id","serial","NOT NULL",0,"","",$FFFFFFFF,""
+Field="role code","role_cd","@VARCHAR(16)","NOT NULL",,"","",$FFFFFFFF,""
+Field="authority control code","authority_control_cd","@VARCHAR(14)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+Index=m_role_authority_control_uidx1=1,role_cd,authority_control_cd
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20170627094654
+Position="Main",750,750
+ZOrder=4
+
+[Relation]
+Entity1=m_mes_role
+Entity2=m_role_authority_control
+RelationType1=2
+RelationType2=3
+Fields1=role_cd
+Fields2=role_cd
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5930,5208,5812,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20161220152542
+LineMode=0
+Bar1=593
+Bar2=521
+Bar3=581
+TermPos1=R
+TermPos2=R
+ZOrder=3
+
+[Entity]
+PName=m_area_master
+LName=area master
+Comment=
+TableOption=
+Page=Main
+Left=500
+Top=500
+Field="area id","area_id","serial","NOT NULL",0,"","",$FFFFFFFF,""
+Field="area code","area_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="area name","area_name","@VARCHAR(64)","NOT NULL",,"","",$FFFFFFFF,""
+Field="location id","location_id","integer","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+Index=m_area_uidx1=1,area_cd,location_id,factory_cd
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20190119172101
+Position="Main",500,500
+ZOrder=20
+
+[Relation]
+Entity1=m_area_master
+Entity2=m_palette_master
+RelationType1=1
+RelationType2=3
+Fields1=area_id
+Fields2=area_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5824,7275,5356,R,R,""
+Dependence=0
+Caption=
+PName=
+LineMode=0
+Bar1=582
+Bar2=728
+Bar3=536
+TermPos1=R
+TermPos2=R
+ZOrder=19
+
+[Line]
+Page=Main
+Left=518
+Top=1422
+ZOrder=18
+Width=0
+Height=0
+
+[Relation]
+Entity1=m_process
+Entity2=m_process_stocklocation
+RelationType1=2
+RelationType2=3
+Fields1=process_id
+Fields2=process_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,4423,7842,4335,R,R,""
+Dependence=0
+Caption=
+PName=
+LineMode=0
+Bar1=442
+Bar2=784
+Bar3=434
+TermPos1=R
+TermPos2=R
+ZOrder=23
+
+[Entity]
+PName=m_process_stocklocation
+LName=process stock location
+Comment=
+TableOption=
+Page=Main
+Left=100
+Top=700
+Field="process_stocklocation_id","process_stocklocation_id","serial","NOT NULL",0,"","",$FFFFFFFF,""
+Field="process id","process_id","integer","NOT NULL",,"","",$FFFFFFFF,""
+Field="stock_location_id","stock_location_id","integer","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date tme","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+Index=m_process_stocklocation_uidx1=1,process_id,factory_cd
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20181009114040
+Position="Main",100,700
+ZOrder=22
+
+[Entity]
+PName=m_palette_master
+LName=palette master
+Comment=
+TableOption=
+Page=Main
+Left=450
+Top=800
+Field="palette id","palette_id","serial","NOT NULL",0,"","",$FFFFFFFF,""
+Field="palette code","palette_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="palette name","palette_name","@VARCHAR(64)","NOT NULL",,"","",$FFFFFFFF,""
+Field="area id","area_id","integer","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+Index=m_palette_uidx1=1,palette_cd,area_id,factory_cd
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20190119172118
+Position="Main",450,800
+ZOrder=21
+
+[Entity]
+PName=m_mes_user
+LName=MES user master
+Comment=
+TableOption=
+Page=Main
+Left=2150
+Top=400
+Field="user code","user_cd","@VARCHAR(32)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="user name","user_name","@VARCHAR(128)","NOT NULL",,"","",$FFFFFFFF,"  "
+Field="locale id","locale_id","integer",,,"","",$FFFFFFFF,""
+Field="multi_login_flag","multi_login_flag","@CHAR(1)",,,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Field="registrated_factory code","registrated_factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20170825112414
+Position="Main",2150,400
+ZOrder=14
+
+[Entity]
+PName=m_mes_role
+LName=MES role master
+Comment=
+TableOption=
+Page=Main
+Left=1100
+Top=700
+Field="role code","role_cd","@VARCHAR(16)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="role name","role_name","@VARCHAR(64)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20170627094535
+Position="Main",1100,700
+ZOrder=13
+
+[Entity]
+PName=m_mes_user_role
+LName=MES user role master
+Comment=
+TableOption=
+Page=Main
+Left=1450
+Top=600
+Field="user role id","user_role_id","serial","NOT NULL",0,"","",$FFFFFFFF,""
+Field="user code","user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="role code","role_cd","@VARCHAR(16)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Field="factory code","factory_cd","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+Index=m_user_role=1,user_cd,role_cd
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20170627094557
+Position="Main",1450,600
+ZOrder=12
+
+[Relation]
+Entity1=m_country_language
+Entity2=m_mes_user
+RelationType1=1
+RelationType2=3
+Fields1=locale_id
+Fields2=locale_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5020,5753,5156,R,R,""
+Dependence=0
+Caption=
+PName=
+LineMode=0
+Bar1=502
+Bar2=575
+Bar3=516
+TermPos1=R
+TermPos2=R
+ZOrder=17
+
+[Relation]
+Entity1=m_mes_user
+Entity2=m_login_password
+RelationType1=2
+RelationType2=3
+Fields1=user_cd
+Fields2=user_cd
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5424,5159,3735,R,R,""
+Dependence=1
+Caption=
+PName=
+LineMode=0
+Bar1=542
+Bar2=516
+Bar3=374
+TermPos1=R
+TermPos2=R
+ZOrder=16
+
+[Entity]
+PName=m_country_language
+LName=country language master
+Comment=
+TableOption=
+Page=Main
+Left=2150
+Top=150
+Field="locale id","locale_id","serial","NOT NULL",0,"","",$FFFFFFFF,""
+Field="country","country","@VARCHAR(8)","NOT NULL",,"","",$FFFFFFFF,""
+Field="language","language","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration user code","registration_user_cd","@VARCHAR(32)","NOT NULL",,"","",$FFFFFFFF,""
+Field="registration date time","registration_date_time","timestamp","NOT NULL",,"","",$FFFFFFFF,""
+Index=m_country_language_uidx1=2,country,language
+EffectMode=None
+Color=$000000
+BkColor=$C0DCC0
+ModifiedDateTime=20170823110147
+Position="Main",2150,150
+ZOrder=15

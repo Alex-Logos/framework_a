@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{70465337-66B7-475A-B868-47044855AA90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DLL", "DLL", "{863969F2-C3A5-4677-B273-349AEFF5EE53}"
+	ProjectSection(SolutionItems) = preProject
+		Dll\Framework.dll = Dll\Framework.dll
+		Dll\log4net.dll = Dll\log4net.dll
+		Dll\Microsoft.Office.Interop.Excel.dll = Dll\Microsoft.Office.Interop.Excel.dll
+		Dll\npgsql.dll = Dll\npgsql.dll
+		Dll\System.Drawing.Common.dll = Dll\System.Drawing.Common.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ERD", "ERD", "{B5602E05-926E-40C5-AEE7-028CF5E2B095}"
+	ProjectSection(SolutionItems) = preProject
+		ERD\Framework_ERD.a5er = ERD\Framework_ERD.a5er
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70465337-66B7-475A-B868-47044855AA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70465337-66B7-475A-B868-47044855AA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70465337-66B7-475A-B868-47044855AA90}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{70465337-66B7-475A-B868-47044855AA90}.Debug|x64.Build.0 = Debug|Any CPU
+		{70465337-66B7-475A-B868-47044855AA90}.Debug|x86.ActiveCfg = Debug|x86
+		{70465337-66B7-475A-B868-47044855AA90}.Debug|x86.Build.0 = Debug|x86
+		{70465337-66B7-475A-B868-47044855AA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70465337-66B7-475A-B868-47044855AA90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70465337-66B7-475A-B868-47044855AA90}.Release|x64.ActiveCfg = Release|x64
+		{70465337-66B7-475A-B868-47044855AA90}.Release|x64.Build.0 = Release|x64
+		{70465337-66B7-475A-B868-47044855AA90}.Release|x86.ActiveCfg = Release|x86
+		{70465337-66B7-475A-B868-47044855AA90}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F0D659F-589D-4363-9948-ED39BC407F86}
+	EndGlobalSection
+EndGlobal

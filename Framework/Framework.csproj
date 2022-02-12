@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70465337-66B7-475A-B868-47044855AA90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Com.Nidec.Mes.Framework</RootNamespace>
+    <AssemblyName>Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Dll\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\Dll\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="npgsql, Version=2.0.12.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractUpdateLogDataAccessObject.cs" />
+    <Compile Include="AbstractDataAccessObject.cs" />
+    <Compile Include="ApplicationInitializer.cs" />
+    <Compile Include="AuthentificateStrategyDataTypeEnum.cs" />
+    <Compile Include="BatchStaticCachedConfigurationReader.cs" />
+    <Compile Include="CommonControls\ButtonCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\CheckedListBoxCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\ComboBoxMultiSelectCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\DateTimePickerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonControls\DateTimePickerControl.Designer.cs">
+      <DependentUpon>DateTimePickerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControls\RadioButtonCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\CheckBoxCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\ComboBoxCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\CommonHeaderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonControls\CommonHeaderControl.Designer.cs">
+      <DependentUpon>CommonHeaderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControls\DataGridViewCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\DateTimePickerCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\GroupBoxCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\LabelCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\TabControlCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\PanelCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\TextBoxCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\TimeControlCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\TreeViewCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonLogger.cs" />
+    <Compile Include="ConfigurationDataTypeEnum.cs" />
+    <Compile Include="DBDataCheckHelper.cs" />
+    <Compile Include="DbParameterList.cs" />
+    <Compile Include="DefaultApplicationContext.cs" />
+    <Compile Include="DefaultApplicationInitializer.cs" />
+    <Compile Include="Login\Cbm\CheckLoginBasedOnServerAuthenticationFlagCbm.cs" />
+    <Compile Include="Login\Dao\CheckSapPasswordSyncDao.cs" />
+    <Compile Include="Login\LdapUserAuthentificateAndUpdateSapUserStrategy.cs" />
+    <Compile Include="Login\LdapUserAuthentificateForSpecifiedUserAndUpdateSapUserStrategy.cs" />
+    <Compile Include="Login\Vo\SapUserVo.cs" />
+    <Compile Include="Login\Cbm\CheckLdapLoginCbm.cs" />
+    <Compile Include="MoldShotHistoryDeletionVo .cs" />
+    <Compile Include="RemoteCbmInvoker.cs" />
+    <Compile Include="RemoteCbmInvokerProxy.cs" />
+    <Compile Include="ServerConfigurationDataTypeEnum.cs" />
+    <Compile Include="DBServerDateTimeCbm.cs" />
+    <Compile Include="BooleanValueObject.cs" />
+    <Compile Include="UserDataFactory.cs" />
+    <Compile Include="TransactionContextFactory.cs" />
+    <Compile Include="InitializationSystemExceptionHandler.cs" />
+    <Compile Include="DefaultUnhandledExceptionHandler.cs" />
+    <Compile Include="EncryptDecrypt.cs" />
+    <Compile Include="FormCommonBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommonBase.Designer.cs">
+      <DependentUpon>FormCommonBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Cbm\ChangePasswordCbm.cs" />
+    <Compile Include="Login\Dao\ChangePasswordDao.cs" />
+    <Compile Include="Login\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Vo\ChangePasswordVo.cs" />
+    <Compile Include="Login\Dao\CheckLoginDao.cs" />
+    <Compile Include="Login\Cbm\CheckLoginCbm.cs" />
+    <Compile Include="Login\Cbm\CheckPasswordCbm.cs" />
+    <Compile Include="Login\Dao\CheckPasswordDao.cs" />
+    <Compile Include="Login\LocalUserAuthentificateStrategy.cs" />
+    <Compile Include="InitializationErrorMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitializationErrorMessageForm.Designer.cs">
+      <DependentUpon>InitializationErrorMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PqmCbmInvoker.cs" />
+    <Compile Include="DefaultStaticCachedConfigurationReader.cs" />
+    <Compile Include="ConfigurationReader.cs" />
+    <Compile Include="TimeVo.cs" />
+    <Compile Include="SimpleGetDBProcessingTimeDao.cs" />
+    <Compile Include="SimpleGetDBProcessingTimeCbm.cs" />
+    <Compile Include="UnhandledExceptionHandler.cs" />
+    <Compile Include="UpdateLogHistoryCommandAdaptorProxy.cs" />
+    <Compile Include="DefaultNpgCommandAdaptor.cs" />
+    <Compile Include="DataAccessObject.cs" />
+    <Compile Include="DbCommandAdapter.cs" />
+    <Compile Include="DefaultNpgParameterList.cs" />
+    <Compile Include="Login\FactorySelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FactorySelectionForm.Designer.cs">
+      <DependentUpon>FactorySelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommon.Designer.cs">
+      <DependentUpon>FormCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Cbm\LoginCbm.cs" />
+    <Compile Include="Login\Dao\LoginDao.cs" />
+    <Compile Include="Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Vo\LoginInVo.cs" />
+    <Compile Include="Login\Vo\LoginOutVo.cs" />
+    <Compile Include="Login\LdapUserAuthentificateStrategy.cs" />
+    <Compile Include="Login\UserAuthentificateStrategy.cs" />
+    <Compile Include="MessageBuilder.cs" />
+    <Compile Include="MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpMessageController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleMessageBuilder.cs" />
+    <Compile Include="StringCheckHelper.cs" />
+    <Compile Include="UpdateResultVo.cs" />
+    <Compile Include="CommonControls\UserControlCommon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserDataSpecifiedTransactionContextFactory.cs" />
+    <Compile Include="ValueObjectList.cs" />
+    <Compile Include="ValueObject.cs" />
+    <Compile Include="DefaultTransactionContextFactory.cs" />
+    <Compile Include="TransactionContext.cs" />
+    <Compile Include="UserData.cs" />
+    <Compile Include="ApplicationException.cs" />
+    <Compile Include="SystemException.cs" />
+    <Compile Include="MessageData.cs" />
+    <Compile Include="DefaultCbmInvoker.cs" />
+    <Compile Include="CbmController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaitProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitProgressForm.Designer.cs">
+      <DependentUpon>WaitProgressForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CommonControls\ButtonCommon.resx">
+      <DependentUpon>ButtonCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\DateTimePickerControl.resx">
+      <DependentUpon>DateTimePickerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\RadioButtonCommon.resx">
+      <DependentUpon>RadioButtonCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\CheckBoxCommon.resx">
+      <DependentUpon>CheckBoxCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\ComboBoxCommon.resx">
+      <DependentUpon>ComboBoxCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\CommonHeaderControl.resx">
+      <DependentUpon>CommonHeaderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\DataGridViewCommon.resx">
+      <DependentUpon>DataGridViewCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\DateTimePickerCommon.resx">
+      <DependentUpon>DateTimePickerCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\LabelCommon.resx">
+      <DependentUpon>LabelCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\TabControlCommon.resx">
+      <DependentUpon>TabControlCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\PanelCommon.resx">
+      <DependentUpon>PanelCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\TextBoxCommon.resx">
+      <DependentUpon>TextBoxCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\TreeViewCommon.resx">
+      <DependentUpon>TreeViewCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\UserControlCommon.resx">
+      <DependentUpon>UserControlCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommonBase.resx">
+      <DependentUpon>FormCommonBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitializationErrorMessageForm.resx">
+      <DependentUpon>InitializationErrorMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\ChangePasswordForm.ja-JP.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\ChangePasswordForm.zh-Hans.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FactorySelectionForm.ja-JP.resx">
+      <DependentUpon>FactorySelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FactorySelectionForm.resx">
+      <DependentUpon>FactorySelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommon.resx">
+      <DependentUpon>FormCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FactorySelectionForm.zh-Hans.resx">
+      <DependentUpon>FactorySelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm.ja-JP.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm.zh-Hans.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitProgressForm.resx">
+      <DependentUpon>WaitProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\FormIcon.ico" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\NIDEC_Logo_small.png" />
+    <None Include="Images\ZimmerBiometLogo.png" />
+    <None Include="Images\ZimmerBiometLogo1.png" />
+    <None Include="Images\ZimmerBiometLogo2.png" />
+    <Content Include="log4net.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

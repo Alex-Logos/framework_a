@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ffce00040" xml:space="preserve">
+    <value>Connection string is not specified in MySqlCbmInvoker.</value>
+  </data>
+  <data name="ffce00023" xml:space="preserve">
+    <value>ApplicationException occured in cbm execution [{0}].</value>
+  </data>
+  <data name="ffce00012" xml:space="preserve">
+    <value>[APPLICATION_HEADER] [{0}] in the configuration file.</value>
+  </data>
+  <data name="llce00008" xml:space="preserve">
+    <value>Please provide valid authenticate flag 1, 2, 3 or 4.
+Current value :[{0}].</value>
+  </data>
+  <data name="llce00022" xml:space="preserve">
+    <value>Please provide valid ldap authenticate flag to check for target user 0(No) or 1(Yes).
+Current value :[{0}].</value>
+  </data>
+  <data name="llce00013" xml:space="preserve">
+    <value>Old password is error.Please input again!</value>
+  </data>
+  <data name="ffce00030" xml:space="preserve">
+    <value>[APPLICATION_ENVIRONMENT_SETTINGS] [{0}] in the configuration file.</value>
+  </data>
+  <data name="ffce00027" xml:space="preserve">
+    <value>Exception occured in dbconnection close [{0}].</value>
+  </data>
+  <data name="ffce00016" xml:space="preserve">
+    <value>application configuration setting value is null.</value>
+  </data>
+  <data name="ffce00024" xml:space="preserve">
+    <value>SystemException occured in cbm execution [{0}].</value>
+  </data>
+  <data name="ffce00056" xml:space="preserve">
+    <value>Exception occured in dbconnection close [{0}]in SqlServerCbmInvoker.</value>
+  </data>
+  <data name="ffce00059" xml:space="preserve">
+    <value>Column Name is not specified in DefaultSqlServerParameterList.</value>
+  </data>
+  <data name="llce00031" xml:space="preserve">
+    <value>The user is not registered as SAP user even though the mes user is SAP_password_sync user. Please log in as another user and register the SAP user.</value>
+  </data>
+  <data name="ffce00005" xml:space="preserve">
+    <value>usersettings data not found in the configuration file.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="NIDEC_Logo_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\NIDEC_Logo_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ffce00008" xml:space="preserve">
+    <value>Error occured when kill the process : {0}</value>
+  </data>
+  <data name="ZimmerBiometLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\ZimmerBiometLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ffce00052" xml:space="preserve">
+    <value>Cbm Controller is not specified [{0}] in SqlServerCbmInvoker.</value>
+  </data>
+  <data name="ffce00001" xml:space="preserve">
+    <value>Cbm Controller is not specified [{0}].</value>
+  </data>
+  <data name="llce00020" xml:space="preserve">
+    <value>LdapException has occurred in the LDAP authentification bind request process with network credential[{0}].</value>
+  </data>
+  <data name="ffce00045" xml:space="preserve">
+    <value>Exception occured in dbconnection close [{0}]in MySqlCbmInvoker.</value>
+  </data>
+  <data name="ffce00046" xml:space="preserve">
+    <value>InvalidOperationException occured in rollback transaction [{0}]in MySqlCbmInvoker.</value>
+  </data>
+  <data name="ffce00011" xml:space="preserve">
+    <value>Error occured when kill the process during application initialization : {0}</value>
+  </data>
+  <data name="ffce00021" xml:space="preserve">
+    <value>Exception occured in wait progress form running.</value>
+  </data>
+  <data name="llce00006" xml:space="preserve">
+    <value>Please provide valid Menu.</value>
+  </data>
+  <data name="llce00030" xml:space="preserve">
+    <value>User ID, password, or both are not correct.</value>
+  </data>
+  <data name="ffce00041" xml:space="preserve">
+    <value>Cbm Controller is not specified [{0}] in MySqlCbmInvoker.</value>
+  </data>
+  <data name="ffce00042" xml:space="preserve">
+    <value>ApplicationException occured in cbm execution [{0}] in MySqlCbmInvoker.</value>
+  </data>
+  <data name="ffce00028" xml:space="preserve">
+    <value>InvalidOperationException occured in rollback transaction [{0}].</value>
+  </data>
+  <data name="ffce00015" xml:space="preserve">
+    <value>[SERVER_TIME_ZONE] [{0}] in the configuration file.</value>
+  </data>
+  <data name="ffce00033" xml:space="preserve">
+    <value>NullReferenceException occurs in getting sectionname from configuration.</value>
+  </data>
+  <data name="ffce00025" xml:space="preserve">
+    <value>Unexcepted error occured in cbm execution [{0}].</value>
+  </data>
+  <data name="ffce00055" xml:space="preserve">
+    <value>Unexcepted error occured in cbm execution [{0}]in SqlServerCbmInvoker.</value>
+  </data>
+  <data name="ffce00058" xml:space="preserve">
+    <value>UnhandledException occured in rollback transaction [{0}]in SqlServerCbmInvoker.</value>
+  </data>
+  <data name="ffce00038" xml:space="preserve">
+    <value>Please select factory.</value>
+  </data>
+  <data name="ffce00037" xml:space="preserve">
+    <value>[APPLICATION_ENVIRONMENT_HEADER] [{0}] in the configuration file.</value>
+  </data>
+  <data name="ffce00006" xml:space="preserve">
+    <value>Data not found for usersettings in the configuration file.</value>
+  </data>
+  <data name="ffce00051" xml:space="preserve">
+    <value>Connection string is not specified in SqlServerCbmInvoker.</value>
+  </data>
+  <data name="llce00028" xml:space="preserve">
+    <value>Authentication flag is missing in server setting file.</value>
+  </data>
+  <data name="llce00015" xml:space="preserve">
+    <value>ArgumentNullException has occurred in the LDAP authentification send request process[{0}].</value>
+  </data>
+  <data name="ZimmerBiometLogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\ZimmerBiometLogo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="llce00025" xml:space="preserve">
+    <value>SystemException in LdapUserAuthentificateForSpecifiedUserAndUpdateSapUserStrategy - Multiple data exists for same user [{0}] in m_ldap_user table.</value>
+  </data>
+  <data name="llce00002" xml:space="preserve">
+    <value>Please input login.</value>
+  </data>
+  <data name="llce00005" xml:space="preserve">
+    <value>Data not found for the user [{0}].</value>
+  </data>
+  <data name="ffce00048" xml:space="preserve">
+    <value>Applicationsettingsfilename is null in DefaultStaticCachedConfigurationReader.</value>
+  </data>
+  <data name="llce00010" xml:space="preserve">
+    <value>Please input new password .</value>
+  </data>
+  <data name="ffce00050" xml:space="preserve">
+    <value>Batchmain settingsfilename is null in BatchStaticCachedConfigurationReader.</value>
+  </data>
+  <data name="llce00026" xml:space="preserve">
+    <value>Sap password not updated for the login user [{0}] in m_sap_user table.</value>
+  </data>
+  <data name="ffce00047" xml:space="preserve">
+    <value>UnhandledException occured in rollback transaction [{0}]in MySqlCbmInvoker.</value>
+  </data>
+  <data name="llce00023" xml:space="preserve">
+    <value>User [{0}] specified multiple times for ldap authentificate.</value>
+  </data>
+  <data name="llce00004" xml:space="preserve">
+    <value>Please provide  valid input.</value>
+  </data>
+  <data name="llci00001" xml:space="preserve">
+    <value>Password has been updated successfully. Please login again.</value>
+  </data>
+  <data name="llci00002" xml:space="preserve">
+    <value>Are you sure want to logout ?</value>
+  </data>
+  <data name="llce00007" xml:space="preserve">
+    <value>Error has occurred in the LDAP authentification process[{0}].</value>
+  </data>
+  <data name="ffce00060" xml:space="preserve">
+    <value>USER_NUMBER_DECIMAL_SEPARATOR is null.</value>
+  </data>
+  <data name="ffce00014" xml:space="preserve">
+    <value>[AUTHENTIFICATE_FLAG] [{0}] in the configuration file.</value>
+  </data>
+  <data name="ffce00043" xml:space="preserve">
+    <value>SystemException occured in cbm execution [{0}]in MySqlCbmInvoker.</value>
+  </data>
+  <data name="ffce00032" xml:space="preserve">
+    <value>NullReferenceException occurs in getting configuration.</value>
+  </data>
+  <data name="ffce00004" xml:space="preserve">
+    <value>Configuration file not found.</value>
+  </data>
+  <data name="ffce00054" xml:space="preserve">
+    <value>SystemException occured in cbm execution [{0}]in SqlServerCbmInvoker.</value>
+  </data>
+  <data name="ffce00031" xml:space="preserve">
+    <value>Please provide valid keyname[{0}] in the settings file to get the value.</value>
+  </data>
+  <data name="ffce00007" xml:space="preserve">
+    <value>Data not found for the [{0}] in the configuration file.</value>
+  </data>
+  <data name="ffce00057" xml:space="preserve">
+    <value>InvalidOperationException occured in rollback transaction [{0}]in SqlServerCbmInvoker.</value>
+  </data>
+  <data name="llci00010" xml:space="preserve">
+    <value>Login password text is blank.</value>
+  </data>
+  <data name="llci00005" xml:space="preserve">
+    <value>User [{0}] not registered in m_sap_user table.</value>
+  </data>
+  <data name="llce00029" xml:space="preserve">
+    <value>Please provide valid authenticate: 1(LDAP), 2(Local DB), 3(LDAP + SAP), 4(LDAP or Local DB), 5(LDAP or Local DB + SAP).
+Current value :[{0}].</value>
+  </data>
+  <data name="llci00006" xml:space="preserve">
+    <value>SapUserVo is null or Ldap password and Sap user password is already same for user [{0}].</value>
+  </data>
+  <data name="llce00019" xml:space="preserve">
+    <value>ObjectDisposedException has occurred in the LDAP authentification bind request process with network credential[{0}].</value>
+  </data>
+  <data name="ffce00035" xml:space="preserve">
+    <value>Section not found for the [{0}] in the configuration file.</value>
+  </data>
+  <data name="ffce00003" xml:space="preserve">
+    <value>ConfigurationErrorsException occured in access configuration file{0}.</value>
+  </data>
+  <data name="llce00014" xml:space="preserve">
+    <value>ObjectDisposedException has occurred in the LDAP authentification send request process[{0}].</value>
+  </data>
+  <data name="ffce00020" xml:space="preserve">
+    <value>Exception occured during password encryption.</value>
+  </data>
+  <data name="llce00001" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="ffce00036" xml:space="preserve">
+    <value>Element not found for the [{0}] in the configuration file.</value>
+  </data>
+  <data name="llce00012" xml:space="preserve">
+    <value>New password should not be same as old password.</value>
+  </data>
+  <data name="ffce00018" xml:space="preserve">
+    <value>Error occured remote service object creation : {0}.</value>
+  </data>
+  <data name="llci00009" xml:space="preserve">
+    <value>Login user text is blank.</value>
+  </data>
+  <data name="llci00007" xml:space="preserve">
+    <value>User [{0}] specified for ldap authentificate.</value>
+  </data>
+  <data name="ffce00022" xml:space="preserve">
+    <value>Server Connection error : [{0}].</value>
+  </data>
+  <data name="ffce00013" xml:space="preserve">
+    <value>[CONNECTION_STRING] [{0}] in the configuration file.</value>
+  </data>
+  <data name="ffce00044" xml:space="preserve">
+    <value>Unexcepted error occured in cbm execution [{0}]in MySqlCbmInvoker.</value>
+  </data>
+  <data name="llci00003" xml:space="preserve">
+    <value>Please provide valid input in ldap authentificate for specified user.</value>
+  </data>
+  <data name="llce00011" xml:space="preserve">
+    <value>Please input confirm password.</value>
+  </data>
+  <data name="ffce00049" xml:space="preserve">
+    <value>Configvaluemap hashtable instance not created in DefaultStaticCachedConfigurationReader.</value>
+  </data>
+  <data name="llce00021" xml:space="preserve">
+    <value>InvalidOperationException has occurred in the LDAP authentification bind request process with network credential[{0}].</value>
+  </data>
+  <data name="ffce00019" xml:space="preserve">
+    <value>Connection string is not specified.</value>
+  </data>
+  <data name="llci00011" xml:space="preserve">
+    <value>User name, password, or both are not correct.</value>
+  </data>
+  <data name="ffce00029" xml:space="preserve">
+    <value>[{0}] settings file not found.</value>
+  </data>
+  <data name="llce00009" xml:space="preserve">
+    <value>New password and confirm password not matching.</value>
+  </data>
+  <data name="ffce00026" xml:space="preserve">
+    <value>UnhandledException occured in rollback transaction [{0}].</value>
+  </data>
+  <data name="ffce00017" xml:space="preserve">
+    <value>application configuration setting data not found.</value>
+  </data>
+  <data name="llci00008" xml:space="preserve">
+    <value>SapUserVo is null for user [{0}] in CheckAndUpdateLdapPasswordForSapUserCbm.</value>
+  </data>
+  <data name="llci00004" xml:space="preserve">
+    <value>User [{0}] not specified for ldap authentificate.</value>
+  </data>
+  <data name="ffce00009" xml:space="preserve">
+    <value>Unhandled exception occured : {0}</value>
+  </data>
+  <data name="ffce00053" xml:space="preserve">
+    <value>ApplicationException occured in cbm execution [{0}] in SqlServerCbmInvoker.</value>
+  </data>
+  <data name="ffce00039" xml:space="preserve">
+    <value>Column Name is not specified in DefaultMySqlParameterList.</value>
+  </data>
+  <data name="llce00018" xml:space="preserve">
+    <value>DirectoryOperationException has occurred in the LDAP authentification send request process[{0}].</value>
+  </data>
+  <data name="ffce00034" xml:space="preserve">
+    <value>Value not found for the [{0}] in the configuration file.</value>
+  </data>
+  <data name="ffce00002" xml:space="preserve">
+    <value>Column Name is not specified.</value>
+  </data>
+  <data name="llce00027" xml:space="preserve">
+    <value>Invo is null in CheckAndUpdateLdapPasswordForSapUserCbm.</value>
+  </data>
+  <data name="llce00016" xml:space="preserve">
+    <value>NotSupportedException has occurred in the LDAP authentification send request process[{0}].</value>
+  </data>
+  <data name="llce00024" xml:space="preserve">
+    <value>Multiple data exists for same user [{0}] in m_sap_user table.</value>
+  </data>
+  <data name="llce00003" xml:space="preserve">
+    <value>Please input Password.</value>
+  </data>
+  <data name="ffce00010" xml:space="preserve">
+    <value>Unexpected error has occurred again while handling unexpected exception.</value>
+  </data>
+  <data name="llce00017" xml:space="preserve">
+    <value>LdapException has occurred in the LDAP authentification send request process[{0}].</value>
+  </data>
+  <data name="ZimmerBiometLogo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\ZimmerBiometLogo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
