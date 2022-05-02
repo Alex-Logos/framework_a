@@ -7,7 +7,7 @@
     <ProjectGuid>{70465337-66B7-475A-B868-47044855AA90}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Com.Nidec.Mes.Framework</RootNamespace>
+    <RootNamespace>Com.ZimVie.Wcs.Framework</RootNamespace>
     <AssemblyName>Framework</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
